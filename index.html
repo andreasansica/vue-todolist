@@ -14,8 +14,12 @@
 
 
       <div id="app" class="container">
-        <input  v-for="item in todo" placeholder="Inserisci un attività" name="" value="">
-        <button type="button" name="button" @click="aggiungi">Aggiungi </button>
+        <input  v-model="newTodo" placeholder="Inserisci un attività" @keyup.enter="add">
+        <button type="button" name="button" @click="add" >Aggiungi </button>
+        <div class="output" v-for="(item, index) in todo">
+          {{todo[index]}}
+          <i class="fas fa-times" @click="remove(index)"></i>
+        </div>
       </div>
 
 
