@@ -3,7 +3,7 @@ var app = new Vue({
   el: "#app",
   data : {
     todo : ["Andare a correre"],
-    newTodo : ""
+    newTodo : [""]
   },
   methods : {
     add : function(){
