@@ -3,11 +3,20 @@ var app = new Vue({
   el: "#app",
   data : {
     todo : ["Andare a correre"],
-    newTodo : [""]
+    newTodo : [],
   },
   methods : {
     add : function(){
-      this.todo.push(this.newTodo)
+      if (this.newTodo === "") {
+        alert("Inserisci un attività")
+      }
+      else if (this.newTodo.includes(this.todo)) {
+        alert("Attività già inserita")
+      }
+      else{
+        this.todo.push(this.newTodo);
+      }
+      this.newTodo = "";
     },
     remove : function(index){
       this.todo.splice(index, 1);
