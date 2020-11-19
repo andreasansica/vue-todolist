@@ -10,7 +10,7 @@ var app = new Vue({
       if (this.newTodo === "") {
         alert("Inserisci un attività")
       }
-      else if (this.newTodo.includes(this.todo)) {
+      else if (this.todo.includes(this.newTodo)) {
         alert("Attività già inserita")
       }
       else{
