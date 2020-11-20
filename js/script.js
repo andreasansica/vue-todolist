@@ -19,6 +19,7 @@ var app = new Vue({
       this.newTodo = "";
     },
     remove : function(index){
+      // rimuovo elemento in un array
       this.todo.splice(index, 1);
     }
   }
